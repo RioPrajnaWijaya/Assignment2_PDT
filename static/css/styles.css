@@ -1,0 +1,104 @@
+body {
+    background: #f4f4f4;
+}
+
+#demo {
+    font-size: 20px;
+}
+
+/*================== NAVBAR ============= */
+/* .navbar .navItem {
+    
+} */
+
+/* ======= home =======*/
+.home .content {
+    padding: 0 0 0 20px;
+}
+
+.home .content h1 {
+    font-size: 40px;
+    color: rgb(15, 15, 150);
+}
+
+.home .content h3 {
+    font-size: 25px;
+    /* font-weight: 700; */
+    margin-top: 5px;
+}
+
+.home .content p {
+    font-size: 10px;
+    margin-top: 15px;
+    color: #848484;
+}
+
+.home .img{
+    width: 450px;
+    height: auto;
+}
+
+.home .button button[type=button] {
+    border: 0;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding: 10px 32px;
+    color: rgb(15, 15, 150);
+    transition: 0.4s;
+    border-radius: 50px;
+    border: 2px solid rgb(15, 15, 150);
+    background: #fff;
+}
+
+.home .button button[type=button]:hover {
+    background: rgb(15, 15, 150);
+    color: #fff;
+}
+
+/* ==========login page======== */
+.login .box {
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    /* box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 2) ; */
+}
+
+/* ========== REGISTER ======== */
+.register .box {
+    position: relative;
+    width: 400px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    margin-top: 300px;
+    margin-bottom: 0;
+    /* box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 2) ; */
+}
+
+.register .database {
+    margin-top: -300px;
+}
+
+/* =====Dashboard====== */
+.dashboard .button button[type=button] {
+    border: 0;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 10px 32px;
+    color: rgb(20, 31, 155);
+    transition: 0.4s;
+    border-radius: 5px;
+    border: 2px solid rgb(20, 31, 155);
+    background: #fff;
+}
+
+.dashboard .button button[type=button]:hover {
+    background: rgb(20, 31, 155);
+    color: #fff;
+}

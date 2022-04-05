@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+{% endfor %}
+
+<div class="register">
+    <div class="box shadow p-3 mb-5 bg-body rounded">
+        <form method="POST">
+            <header class="header">
+                <h1>Register</h1>
+             </header>
+            {{ form.hidden_tag() }}
+
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+            <br>
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-control") }}
+            <br>
+            
+            {{ form.password_hash.label(class="form-label") }}
+            {{ form.password_hash(class="form-control") }}
+            <br>
+            {{ form.password_hash2.label(class="form-label") }}
+            {{ form.password_hash2(class="form-control") }}
+            <br>
+            {{ form.submit(class="btn btn-primary") }}
+
+        </form>
+    </div>
+
+    <br><br>
+    <div class="database">
+        <h3>Database</h3>
+        <table class="table table-hover table-bordered table-striped">
+
+        {% for our_user in our_users %}
+            <tr>
+                <td>
+                    === Data {{ our_user.id }} === <br> Name: {{ our_user.name }} <br> Username: {{ our_user.username }} <br> Password: {{ our_user.password_hash }}
+                </td>
+            </tr>
+        {% endfor %}
+
+        </table>
+
+        {% endblock %}
+    </div>
+</div>

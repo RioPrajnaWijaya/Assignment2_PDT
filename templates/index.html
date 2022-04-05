@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="home" class="home">
+    <div class="row">
+        <div class="col-lg-5 align-items-stretch position-relative " data-aos="fade-right">
+            <img class="img" src="/static/images/monitoring.png" >
+        </div>
+        <div class="content col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+            <h1 class="content">Let's Start Make Your First Blog</h1>
+            <h3 class="content">With Us!</h3>
+
+            <div class="button">
+                <button type="button" onclick="window.location.href= '{{ url_for('login')}}';">Login</button>
+                <button type="button" onclick="window.location.href= '{{ url_for('register')}}';">Register</button>
+            </div>
+
+            <p class="content">*Login if you have made account <br> *Register first if you haven't made account</p>
+            <p class="content"></p>
+        </div>
+        
+    </div>
+</section>   
+
+{% endblock %}

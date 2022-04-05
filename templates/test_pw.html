@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if username %}
+    <h1>Username : {{ username }}</h1>
+    <h1>Password : {{ password }}</h1>
+    <br>
+    <h2>I found this data</h2>
+    Name : {{ check_pw.name }} <br>
+    Username : {{ check_pw.username }} <br>
+    Password : {{ check_pw.password_hash }}
+    <br>
+    Passed : {{ passed }}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% else %}
+    <h1>What's Your Username and Password ?</h1>
+    <br>
+    <form method="POST">
+
+        {{ form.hidden_tag() }}
+
+        {{ form.username.label(class="form-label") }}
+        {{ form.username(class="form-control") }}
+        <br>
+        {{ form.password_hash.label(class="form-label") }}
+        {{ form.password_hash(class="form-control") }}
+        <br>
+        {{ form.submit(class="btn btn-primary") }}
+
+    </form>
+{% endif %}
+
+{% endblock %}
